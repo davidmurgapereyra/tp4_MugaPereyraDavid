@@ -1,37 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<!--  <html lang="es" xmlns:th="https://www.thymeleaf.org">-->
+<html lang="es" >
 <head>
-<meta charset="UTF-8">
-<title>Index tp4</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1"	>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
 <link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<!-- <link rel="stylesheet"
+th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}"> -->
 </head>
 <body>
-	<div>
-		<header>
-			<div data-th-replace="~{fragments/header::navbar}">
-			</div>
-		</header>
-		
-		<div class='row'>
-			<main class="col-9">
-				<div data-th-replace="~{fragments/header::cardVisual}"></div>
-			</main>
-			
-			<aside class="col-3">
-				<a class="nav-link" href="#">Biblioteca</a>
-				<a class="nav-link" href="#">Calendario Academico</a>
-			</aside>
-		</div>
-		
-			<div data-th-replace="~{fragments/header::pagination}"></div>
-		
-		<div data-th-replace="~{fragments/header::footerdark}"></div>
-		
-		
-	</div>
+<div data-th-replace="~{fragments/navbar :: navbar}"></div>
+<div class="container">
+	<h1>Hola mundo</h1>
 	<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+	<!--  <script th:src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>-->  
+</div>
 </body>
 </html>
