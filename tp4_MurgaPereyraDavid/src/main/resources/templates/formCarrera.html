@@ -9,14 +9,15 @@
 <title>Formulario Carreras</title>
 </head>
 <body>
+	<div data-th-replace="~{fragments/fragmentos :: navbar}"></div>
 	<div class="container">
 		<h1>FORMULARIO CARRERA</h1>
 		<form data-th-object="${nuevaCarrera}" 
-		data-th-action="@{/guardarCarrera}" 
+		data-th-action="${band}?@{/modificarCarrera}:@{/guardarCarrera}" 
 		method="post">
 			<div class="col-sm-6">
 				<label for="codigo" class="form-label">Codigo</label> 
-				<input type="text" class="form-control"	id="codigo" data-th-field="*{codigo}">				
+				<input type="text" class="form-control"	id="codigo" data-th-field="*{codigo}" data-th-readonly=${band}>				
 			</div>
 			
 			<div class="col-sm-6">
@@ -31,6 +32,7 @@
 			<button type="submit" class="btn btn-primary">Guardar Carrera</button>
 		</form>
 	</div>
+		<div data-th-replace="~{fragments/fragmentos :: footer}"></div>
 
 	<script
 		data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
